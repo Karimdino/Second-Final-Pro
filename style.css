@@ -1,0 +1,659 @@
+/*Allgemein*/
+:root{
+    --background-color:#f5ccaa90;
+    --primary-color:#e70f0f;
+    --dark-color:#c20f77;
+    --grey-color:#031f38;
+    --white-color:rgb(227, 130, 130);
+    --brown-color:#b25e21;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid greenyellow; */ 
+}
+html{
+    font-size: 10px;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/*Karim Header*/
+.logo{
+    font-size: 20px;
+    color: #035195;
+    margin-top: 20px;
+}
+.logo:hover{
+    color: rgb(12, 12, 12);
+}
+@keyframes down{
+    0%{
+        transform: translatex(-80px);
+    }
+    30%{
+        transform: translatex(60px);
+    }
+    50%{
+        transform: translatex(30px);
+    }
+    100%{
+        transform: translatex(0);
+    }
+}
+.logo{
+    animation: down 3s 1;
+}
+.countainer{
+    position: relative;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 98%;
+    background-image: url(../pic/pic2.jpg);
+    background-position: top;
+    background-size: cover;
+    height: 10rem;
+    background:linear-gradient(20deg,cyan,black) ;
+}
+.nav{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    position: relative;
+    height: 8vh;
+    z-index: 2;
+    width: 100%;
+    
+    
+}
+.list-items{
+    display: flex;
+    flex: 0.7;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    right: 100px;
+    
+}
+.list {
+    list-style: none;
+    float: left; 
+}
+.link{
+    text-decoration: none;
+    color:rgb(239, 238, 255) ;
+    font-weight: bold;
+    position: relative;
+}
+.link::before{
+    content: "";
+    height: .7rem;
+    width: .7rem;
+    display: none;
+    transition: 0.2s;
+    top: 2.5rem;
+    left: 50%;
+    border-radius: 3.3rem;
+    position: absolute;
+}
+a:hover{
+    letter-spacing: 0.25em;
+    background: var(--clr);
+    color: var(--clr);
+    box-shadow: 0 0 35px var(--grey-color);
+}
+
+
+
+ ::selection{
+    color: #fff;
+    background: #5372F0;
+  }
+  .Logg{
+    
+    background:linear-gradient(40deg,cyan,rgb(237, 113, 113),skyblue,rgb(145, 156, 128));
+   
+  }
+  .wrapper{
+    width: 380px;
+    padding: 40px 30px 50px 30px;
+    background: #ffffff;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.1);
+    margin-left: 1000px;
+    
+    
+  }
+  .main-con{
+    position: relative;
+    margin-top: 160px;
+    display: flex;
+    justify-content: center;
+  }
+  .main-para{
+    position: absolute;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .main-ul{
+    line-height: 40px;
+    font-size: 30px;
+    margin-top: 180px;
+    margin-right: 30px;
+    
+  }
+  .main-ul li{
+    border-radius: 30px;
+    color: #000007;
+  }
+  
+  .wrapper header{
+    font-size: 35px;
+    font-weight: 600;
+  }
+  .wrapper form{
+    margin: 40px 0;
+  }
+  form .field{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  form .field.shake{
+    animation: shake 0.3s ease-in-out;
+  }
+  @keyframes shake {
+    0%, 100%{
+      margin-left: 0px;
+    }
+    20%, 80%{
+      margin-left: -12px;
+    }
+    40%, 60%{
+      margin-left: 12px;
+    }
+  }
+  form .field .input-area{
+    height: 50px;
+    width: 100%;
+    position: relative;
+  }
+  form input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    padding: 0 45px;
+    font-size: 18px;
+    background: none;
+    caret-color: #5372F0;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+    border-bottom-width: 2px;
+    transition: all 0.2s ease;
+  }
+  form .field input:focus,
+  form .field.valid input{
+    border-color: #5372F0;
+  }
+  form .field.shake input,
+  form .field.error input{
+    border-color: #dc3545;
+  }
+  .field .input-area i{
+    position: absolute;
+    top: 50%;
+    font-size: 18px;
+    pointer-events: none;
+    transform: translateY(-50%);
+  }
+  .input-area .icon{
+    left: 15px;
+    color: #bfbfbf;
+    transition: color 0.2s ease;
+  }
+  .input-area .error-icon{
+    right: 15px;
+    color: #dc3545;
+  }
+  form input:focus ~ .icon,
+  form .field.valid .icon{
+    color: #5372F0;
+  }
+  form .field.shake input:focus ~ .icon,
+  form .field.error input:focus ~ .icon{
+    color: #bfbfbf;
+  }
+  form input::placeholder{
+    color: #bfbfbf;
+    font-size: 17px;
+  }
+  form .field .error-txt{
+    color: #dc3545;
+    text-align: left;
+    margin-top: 5px;
+  }
+  form .field .error{
+    display: none;
+  }
+  form .field.shake .error,
+  form .field.error .error{
+    display: block;
+  }
+  form .pass-txt{
+    text-align: left;
+    margin-top: -10px;
+  }
+  .wrapper a{
+    color: #5372F0;
+    text-decoration: none;
+  }
+  .wrapper a:hover{
+    text-decoration: underline;
+  }
+  form input[type="submit"]{
+    height: 50px;
+    margin-top: 30px;
+    color: #fff;
+    padding: 0;
+    border: none;
+    background: #5372F0;
+    cursor: pointer;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+  form input[type="submit"]:hover{
+    background: #2c52ed;
+  } 
+
+
+
+/*Chris und Karim */
+.main_cnt{
+    margin-top: 25px;
+}
+article{
+    width: 90vw;
+    margin-top: 5rem;
+}
+.couple img{
+    width: 90vw;
+    height: 50rem;
+    z-index: -10;
+    position: relative;
+    opacity: .8;
+}
+
+.heading-ctn h1{
+    margin-top: 620px;
+    position: absolute;
+    top: 20rem;
+    left: 5rem;
+    z-index: 5;
+    font-size: 5rem;
+
+}
+.heading-ctn h2{
+    margin-top: 600px;
+    position: absolute;
+    top: 30rem;
+    left: 5rem;
+    right: 150rem;
+    z-index: 5;
+    width: 30rem;
+    overflow: hidden;
+}
+.icon-ctn{
+    display: flex;
+    height: 20rem;
+    margin-top: -3.5rem;
+}
+.icon-ctn p{
+    font-size: 1.5rem;
+    padding: 2rem;
+    text-align: center;
+}
+.location{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.location figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+}
+.party{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.party figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+}
+.workshop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.workshop figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+}
+.section-1-ctn{
+    margin-top: 5rem;
+}
+.section-1{
+    display: flex;
+    align-items: center;
+}
+.section-1 img{
+    width: 35rem;
+    height:25rem
+    
+}
+.section-1 p{
+    font-size: 1.5rem;
+    padding: 5rem;
+}
+.section-2-ctn{
+    margin-top: 5rem;
+}
+.section-2{
+    display: flex;
+    align-items: center;
+}
+.section-2 img{
+    width: 35rem;
+    height: 25rem;
+}
+.section-2 p{
+    font-size: 1.5rem;
+    padding: 5rem;
+}
+.registration_ctn-card{
+    background: burlywood;
+    height: 40rem;
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    top: -45rem;
+    left: 10rem;
+    opacity: 0.7;
+}
+.registration_ctn-card h3{
+    font-size: 3rem;
+}
+.registration_ctn-card p{
+    font-size: 2rem;
+}
+.container_btn{
+    display: flex;
+    flex-direction: column;
+
+}
+.male_btn{
+    background: cornflowerblue;
+    padding: 1rem 8rem;
+    margin-bottom: 2rem;
+    border-style: none;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+}
+.male_btn img{
+    align-self: center;
+    width: 4rem; 
+    height: 3rem;
+}
+.female_btn{
+   background: #c20f77;
+   padding: 1rem 8rem; 
+   border-style: none;
+   border-radius: 1rem;
+   display: flex;
+   align-items: center;
+   gap: 2rem;
+}
+.female_btn img{
+    align-self: center;
+    height: 3rem;
+}
+/* SLIDESHOW */
+.slides{
+    width: 100%;
+    height: 50rem;
+    display: none;
+}
+.animate-left{
+    position: relative;
+    animation: animateleft 0.8s;
+}
+@keyframes animateleft {
+    from { left: -500px; opacity: 0;}
+    to { left: 0; opacity: 1;}
+}
+
+
+
+
+/*Die Cards Start*/
+
+.content{
+    background-image:url(../pic/pic8.jpg);
+    height: 700px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: row ;
+    flex-wrap: wrap;
+    align-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+.card-titel{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    font-size: 40px;
+    
+}
+.card{
+    background-color: rgb(197, 201, 201);
+    width: 33.25em;
+    box-shadow: 14px 23px #b1ababf0;
+    border-radius: 10px;
+    padding: 25px;
+    margin:33px;
+    transition: 1.0s ease;
+}
+.card:hover {
+    transform: scale(1.4);
+}
+.icon{
+    color: blue;
+    text-align: center;
+    font-size: 8em;
+    cursor: pointer;
+}
+.info h3{
+    color: rgb(216, 2, 2);
+    font-weight: 100px;
+    margin: 10px;
+    font-size: 2em;
+    justify-content: center;
+    display: flex;
+}
+
+
+/*Die Cards End*/
+
+/*Section Our Target Start*/
+.our-target{
+    margin-top: 3px;
+    display: flex;
+    position: relative;
+}
+.our-target img{
+   width: 700px;
+   height: 600px;
+   display: block;
+   margin: 50px auto;
+   border: 1px solid cyan ;
+   padding: 4px;
+}
+.ourtarget-h2{
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%,-50%);
+   
+}
+.our-target p {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+/*Section Our Target End*/
+
+/*Karim FOOTER*/
+
+
+footer{
+    padding-top:30px;
+    position: relative;
+    background-size: cover;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    margin:5px ;
+    
+}
+.end-footer{
+    position: relative; 
+    display: flex;
+    color: rgb(28, 4, 4);
+    justify-content: center;
+    width: 100%;
+    font-size: 15px;
+    background-image: url(../pic/pic7.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.footer-left{
+    width: 25%;
+    
+    line-height:20px;
+}
+.footer-para{
+    margin-top: 10px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    line-height:1;
+    color:#ECE9E6;
+}
+.footer-paraklein{
+    color: #000;;
+}
+.copy-right{
+    margin-top: 10px;
+    color: whitesmoke;
+}
+.footer-span{
+    color: var(--primary-color);
+}
+.footer-middle{
+    width: 25%;
+}
+.footer-right{
+    width: 25%;
+    height: 300px;
+    position: relative;
+}
+.footer-form{
+    position: absolute;
+}
+.footer-contact{
+    font-size:20px;
+    color: #035195;
+}
+.footer-label{
+    margin: 4px 3px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+}
+.footer-input{
+    width: 100%;
+    height: 30px;
+    border: 2px solid transparent;
+}
+.footer-btn{
+    width: 40%;
+    margin-top: 5px;
+    background-color:#035195;
+    color: #1e0012;
+    font-size: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+
+.social-icons{
+    display: flex;
+    justify-content: center;
+    letter-spacing: 23px;
+    margin-top: 20px;
+    font-size: 22px;
+    cursor: pointer;
+    
+}
+footer ul {
+    list-style: none;
+    margin-top:5px;
+}
+footer ul li{
+    margin-top: 10px;
+    cursor: pointer;
+    color:#ECE9E6;
+}
+
+
+/*Responsive*/
