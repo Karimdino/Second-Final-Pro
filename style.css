@@ -27,11 +27,25 @@ body{
 
 
 /*Karim Header*/
+.logo-dad{
+    position: relative;
+    margin-left: 0;
+
+}
+.logo-nav{
+    width: 100px;
+    height: 50px;
+    margin-left: 0;
+    
+}
 .logo{
     font-size: 20px;
     color: #035195;
     margin-top: 20px;
+    z-index: 2;
+    
 }
+
 .logo:hover{
     color: rgb(12, 12, 12);
 }
