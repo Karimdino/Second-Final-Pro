@@ -672,6 +672,11 @@ footer ul li{
 /*********FAQ******************/
 .accordion_wrapper{
     background: rgb(197, 201, 201);
+    border-radius: 1rem;
+    width: 50rem;
+    position: relative;
+    bottom: 50rem;
+    display:none;
 }
 .question_accordion{
     height: 100%;
@@ -724,6 +729,27 @@ footer ul li{
 
 .question img{
     align-self: center;
+}
+.arrow-down{
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid rgb(197, 201, 201);
+    position: relative;
+    left: 20rem;
+    top: 2rem;
+    
+}
+#icon_close{
+    position: relative;
+    left: 23rem;
+    top: -4rem;
+    cursor: pointer;
+}
+#icon_close img{
+    width: 2rem;
+    height: auto;
 }
 
 
