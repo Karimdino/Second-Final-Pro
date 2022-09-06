@@ -670,7 +670,9 @@ footer ul li{
 }
 
 /*********FAQ******************/
-
+.accordion_wrapper{
+    background: rgb(197, 201, 201);
+}
 .question_accordion{
     height: 100%;
     display: flex;
