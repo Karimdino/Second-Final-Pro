@@ -81,6 +81,42 @@ form.onsubmit = (e)=>{
     window.location.href = form.getAttribute("action"); //redirecting user to the specified url which is inside action attribute of form tag
   }
 }
+
+
+// FAQ
+
+const questions = document.querySelectorAll(".question");
+
+
+
+questions.forEach((question) =>
+  question.addEventListener("click", () => {
+    if (question.parentNode.classList.contains("active")) {
+      question.parentNode.classList.toggle("active");
+    } else {
+      questions.forEach((question) =>
+        question.parentNode.classList.remove("active")
+      );
+      question.parentNode.classList.add("active");
+    }
+  })
+);
+
+
+const faqOpen = document.getElementById('faq-open')
+const accordion_wrapper = document.getElementsByClassName('accordion_wrapper')[0]
+const faqClose = document.getElementById('icon_close')
+
+    const openAccordion = ()=>{
+      accordion_wrapper.style.display = 'block'
+    }
+    faqOpen.addEventListener('click', openAccordion)
+
+    const closeAccordion = ()=>{
+      accordion_wrapper.style.display = 'none'
+    }
+    faqClose.addEventListener('click', closeAccordion)
+
     
 
 
