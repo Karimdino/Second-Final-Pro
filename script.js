@@ -18,7 +18,7 @@ slidePic()
 
 
 
-//---Karim-----
+//---Karim- Slideshow----
 let i = 0;
 let slideImg = ["../pic/pic13.jpg","../pic/pic12.jpg","../pic/pic11.jpg","../pic/pic10.jpg","../pic/pic6.jpg"]
 
@@ -30,7 +30,7 @@ let slideShow = function () {
     } else {
         i = 0;
     }
-    setTimeout("slideShow()",4000)
+    setTimeout("slideShow()",2000)
 }
 
 slideShow()
